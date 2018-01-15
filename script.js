@@ -1,5 +1,9 @@
-var totalCount = document.getElementById('total-count');
+function updateCounters() {
+  var totalCount = document.getElementById('total-count');
+  var totalTodos = document.getElementsByClassName('todo').length;
+  totalCount.innerHTML = totalTodos;
 
-var totalTodos = document.getElementsByClassName('todo').length;
+  console.log('Counters updated!');
+}
 
-totalCount.innerHTML = totalTodos;
+updateCounters();
