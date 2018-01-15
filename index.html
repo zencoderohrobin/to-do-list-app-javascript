@@ -16,11 +16,11 @@
 
     <ul id="todolist">
       <li class="todo">
-        <input id="todo-1" type="checkbox">
+        <input id="todo-1" type="checkbox" onChange="toggleDone.bind(this)();">
         <label for="todo-1">example 1</label>
       </li>
       <li class="todo completed">
-        <input type="checkbox" id="todo-2" checked>
+        <input type="checkbox" id="todo-2" checked onChange="toggleDone.bind(this)();">
         <label for="todo-2">done example</label>
       </li>
     </ul>
