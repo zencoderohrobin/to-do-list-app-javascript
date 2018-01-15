@@ -6,25 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Todo List App</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <h1>Todo List</h1>
-    <form onSubmit='submitTodo(); return false'>
-      <input type="text" id="new-todo" placeholder="What needs to be done?">
+    <p class='h2 text-center mt-2 mb-2 p'>Todo List</p>
+    <form onSubmit='submitTodo(); return false' class='mb-2'>
+      <input type="text" id="new-todo" class="p-2"
+      placeholder="What needs to be done? (type and hit enter.)" autofocus>
     </form>
 
     <ul id="todolist">
       <li class="todo">
         <input id="todo-1" type="checkbox" onChange="toggleDone.bind(this)();">
-        <label for="todo-1">example 1</label>
+        <label for="todo-1">Get things done~! ;-)</label>
       </li>
       <li class="todo completed">
         <input type="checkbox" id="todo-2" checked onChange="toggleDone.bind(this)();">
-        <label for="todo-2">done example</label>
+        <label for="todo-2">something already done. Click [Clean up the list] to remove done items.</label>
       </li>
     </ul>
-    <div class="footer">
+    <div class="footer mt-2 mb-2 p-2 rounded">
       Todo: <span id="todo-count">1</span> |
       Done: <span id="completed-count">0</span> |
       Total: <span id="total-count">1</span> |
@@ -32,9 +37,20 @@
       <a href="#" onClick="cleanUpDoneTodos(); return false">Clean up the list</a>
     </div>
   </div>
+  <div class="container instruction border border-warning">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <p class='font-weight-bold text-danger mt-2'>
+          *Please, keep this in mind.
+        </p>
+        <p class="text-warning">
+          The list is <em>not</em> saved anywhere. If you close or refresh the page, the list
+          will be vaporized. So, use it casually as a temporary or short term purposes.
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src='script.js'></script>
 
-  <script src='script.js'>
-
-  </script>
 </body>
 </html>
