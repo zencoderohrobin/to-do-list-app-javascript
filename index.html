@@ -13,13 +13,13 @@
 </head>
 <body>
   <div class="container">
-    <p class='h2 text-center mt-2 mb-2 p'>Todo List</p>
+    <p class='h2 text-center mt-2 mb-2 p-2' style="font-family: 'Permanent Marker', cursive">Todo List</p>
     <form onSubmit='submitTodo(); return false' class='mb-2'>
       <input type="text" id="new-todo" class="p-2"
       placeholder="What needs to be done? (type and hit enter.)" autofocus>
     </form>
 
-    <ul id="todolist">
+    <ul id="todolist" style="font-family: 'Permanent Marker', cursive">
       <li class="todo">
         <input id="todo-1" type="checkbox" onChange="toggleDone.bind(this)();">
         <label for="todo-1">Get things done~! ;-)</label>
@@ -45,7 +45,9 @@
         </p>
         <p class="text-warning">
           The list is <em>not</em> saved anywhere. If you close or refresh the page, the list
-          will be vaporized. So, use it casually as a temporary or short term purposes.
+          will be vaporized. So, use it casually as a temporary or short term purposes. <br>
+          <span class='text-dark font-italic'>
+          Just keep this page open all-day long until all things are done! ;-)</span>
         </p>
       </div>
     </div>
